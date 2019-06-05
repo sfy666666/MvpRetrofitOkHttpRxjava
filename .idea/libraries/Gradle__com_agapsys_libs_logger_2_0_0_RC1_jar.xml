@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.agapsys.libs:logger:2.0.0-RC1@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.agapsys.libs/logger/2.0.0-RC1/dfc0c9319b75db095d4396d736ed694c7f74256a/logger-2.0.0-RC1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.agapsys.libs/logger/2.0.0-RC1/68891f18c8e38630b04415d23b9e237f1c553e90/logger-2.0.0-RC1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
