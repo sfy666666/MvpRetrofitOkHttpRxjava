@@ -75,17 +75,17 @@ public abstract class BaseObserver<T> extends DisposableObserver<T> {
                 view.hideLoading();
             }
             BaseModel model = (BaseModel) o;
-            if (model.getError_code() == CODE) {
+            /*if (model.getError_code() == CODE) {
                 onSuccess(o);
-                /*服务器返回的指定成功 code  设置是否回调  解开注释回调*//*
+                *//*服务器返回的指定成功 code  设置是否回调  解开注释回调*//**//*
                 if (view != null) {
                     view.onErrorCode(model);
-                }*/
+                }*//*
             } else {
                 if (view != null) {
                     view.onErrorCode(model);
                 }
-            }
+            }*/
         } catch (Exception e) {
             e.printStackTrace();
             onError(e.toString());
@@ -128,13 +128,13 @@ public abstract class BaseObserver<T> extends DisposableObserver<T> {
             switch (code) {
                 //未登录（此处只是案例 供理解）
                 case CONNECT_NOT_LOGIN:
-                    view.onErrorCode(new BaseModel(exception.getMessage(), code));
+                    view.onErrorCode(new BaseModel());
                     onException(CONNECT_NOT_LOGIN, "");
                     break;
                 //其他不等于0 的所有状态
                 default:
                     onException(OTHER_MESSAGE, exception.getMessage());
-                    view.onErrorCode(new BaseModel(exception.getMessage(), code));
+                    view.onErrorCode(new BaseModel());
                     break;
             }
         } else {
@@ -154,12 +154,9 @@ public abstract class BaseObserver<T> extends DisposableObserver<T> {
      * @param message
      */
     private void onException(int unknownError, String message) {
-        BaseModel model = new BaseModel(message, unknownError);
-        if (!NetWorkUtils.isAvailableByPing()) {
-            model.setError_code(NETWORK_ERROR);
-            model.setResaon("网络不可用，请检查网络连接！");
-        }
-        onExceptions(model.getError_code(), model.getResaon());
+        BaseModel model = new BaseModel();
+
+
         if (view != null) {
             view.onErrorCode(model);
         }

@@ -7,6 +7,52 @@ import java.io.Serializable;
  * on 2019/5/31
  */
 public class BaseModel<T> implements Serializable {
+    /**
+     * Https
+     */
+
+    private T HeWeather6;
+
+    public T getHeWeather6() {
+        return HeWeather6;
+    }
+
+    public void setHeWeather6(T heWeather6) {
+        HeWeather6 = heWeather6;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+    /**
+     * 聚合
+     */
+    /*private int error_code;
+
+    public int getError_code() {
+        return error_code;
+    }
+
+    public void setError_code(int error_code) {
+        this.error_code = error_code;
+    }
+
+    private  String resaon;
+
+
+    public T result;
+
+    public BaseModel(String message, int code) {
+        this.resaon = message;
+        this.error_code = code;
+    }
+    @Override
+    public String toString() {
+        return "BaseModel{"+
+                "reason="+resaon+"\n"+
+                ",result="+result+"}";
+    }
     public String getResaon() {
         return resaon;
     }
@@ -21,8 +67,12 @@ public class BaseModel<T> implements Serializable {
 
     public void setResult(T result) {
         this.result = result;
-    }
+    }*/
 
+
+    /**
+     * 原
+     */
     /*private String msg;
         private int code;
         private T data;
@@ -64,29 +114,5 @@ public class BaseModel<T> implements Serializable {
                     ", result=" + data +
                     '}';
         }*/
-    private int error_code;
 
-    public int getError_code() {
-        return error_code;
-    }
-
-    public void setError_code(int error_code) {
-        this.error_code = error_code;
-    }
-
-    private  String resaon;
-
-
-    public T result;
-
-    public BaseModel(String message, int code) {
-        this.resaon = message;
-        this.error_code = code;
-    }
-    @Override
-    public String toString() {
-        return "BaseModel{"+
-                "reason="+resaon+"\n"+
-                ",result="+result+"}";
-    }
 }

@@ -41,7 +41,7 @@ public interface ApiServer {
 
 
 //    http://v.juhe.cn/toutiao/index?type=junshi&key=2c1cb93f8c7430a754bc3ad62e0fac06
-    @POST("toutiao/index?")
-    Observable<BaseModel<MainBean>> getMain(@Query("type") String requestType, @Query("key") String key);
+    @POST("s6/air/now?")
+    Observable<BaseModel<List<MainBean>>> getMain(@Query("location") String requestType, @Query("key") String key);
 
 }

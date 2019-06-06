@@ -75,9 +75,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
      */
     @Override
     public void onErrorCode(BaseModel model) {
-        if (model.getError_code() == NETWORK_ERROR) {
 
-        }
     }
     //显示加载进度框回调
     @Override

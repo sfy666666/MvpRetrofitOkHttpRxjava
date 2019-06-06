@@ -16,10 +16,10 @@ public class MainPresenter extends BasePresenter<MainView> {
     }
 
     public void commentAdd() {
-        addDisposable(apiServer.getMain("junshi","2c1cb93f8c7430a754bc3ad62e0fac06"), new BaseObserver(baseView) {
+        addDisposable(apiServer.getMain("beijing","f464c53cb02240a194640685ee425116"), new BaseObserver(baseView) {
             @Override
             public void onSuccess(Object o) {
-                baseView.onMainSuccess((BaseModel<MainBean>) o);
+                baseView.onMainSuccess((BaseModel<List<MainBean>>) o);
             }
 
             @Override

@@ -41,10 +41,12 @@ public class MainActivity extends BaseActivity<MainPresenter> implements MainVie
     }
 
     @Override
-    public void onMainSuccess(BaseModel<MainBean> o) {
-        List<MainBean.DataBean> data = o.getResult().getData();
-        MainBean.DataBean bean=data.get(0);
-        tv_msg.setText(bean.getTitle());
+    public void onMainSuccess(BaseModel<List<MainBean>> o) {
+        List<MainBean> heWeather6 = o.getHeWeather6();
+        MainBean mainBean = heWeather6.get(0);
+        MainBean.AirNowCityBean air_now_city = mainBean.getAir_now_city();
+
+        tv_msg.setText(air_now_city.getQlty());
     }
 
     @Override

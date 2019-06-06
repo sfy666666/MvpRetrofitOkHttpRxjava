@@ -10,5 +10,5 @@ import java.util.List;
  * on 2019/5/31
  */
 public interface MainView extends BaseView {
-    void onMainSuccess(BaseModel<MainBean> o);
+    void onMainSuccess(BaseModel<List<MainBean>> o);
 }
